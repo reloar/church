@@ -4,7 +4,7 @@
 @model UI.DeptListViewModel
 @{
 
-    ViewBag.Title = "DepartmentCorner";
+    ViewBag.Title = "Departments";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -35,37 +35,36 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
-          
-            @foreach (var item in Model.AllDepartment)
-            {
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-post mb-100">
-                        @*<div class="single-hero-slide bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(@Url.Content("~/Content/images/")@item.ImageThumbnailUrl);">
+        
 
-                        </div>*@
-                        <div class="upcoming-events-thumbnail">
+            <div class="row justify-content-center">
 
-                            <img src="@Url.Content("~/Content/Images/")@item.ImageThumbnailUrl" alt="" />
-                        </div>
-                        <div class="post-content">
-                            <a href="single-post.html" class="post-title">
-                                <h4>@item.Name</h4>
-                            </a>
-                            <div class="post-meta d-flex">
-                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> @item.DepartmentLeaderName</a>
-                                <a href="@Url.Action("JoinWorker","Worker", new { id = item.Id } )">Click to join</a>
+                @foreach (var item in Model.AllDepartment)
+                {
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="container">
+                            <div class="single-blog-post mb-100">
+                                <div class="team-thumb">
+                                    <img src="@Url.Content("~/Content/Images/")@item.ImageThumbnailUrl" alt="" />
+                                </div>
+                                <div class="post-content">
+                                    <a href="@Url.Action("JoinWorker","Worker", new { id = item.Id } )" class="post-title">
+                                        <h4>@item.Name</h4>
+                                    </a>
+                                    <div class="post-meta d-flex">
+                                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> @item.DepartmentLeaderName</a>
+                                        <a href="@Url.Action("JoinWorker","Worker", new { id = item.Id } )">Click to join</a>
+                                    </div>
+
+                                    <p class="post-excerpt">@Html.Raw(item.Description).</p>
+                                </div>
                             </div>
-                            <p class="post-excerpt">@Html.Raw(item.Description).</p>
                         </div>
                     </div>
-                </div>
-            }
+                }
 
-
-
+            </div>
         </div>
-    </div>
 </section>
 <hr />
 <div class="team-members-area section-padding-100-0">

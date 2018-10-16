@@ -189,7 +189,6 @@
   <ItemGroup>
     <Content Include="Content\css\Admin.css" />
     <Content Include="Content\aos.css" />
-    <Content Include="Content\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js" />
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap-theme.css" />
     <Content Include="Content\css\bootstrap.css" />
@@ -289,7 +288,6 @@
     <Content Include="Content\Login\vendor\bootstrap\js\tooltip.js" />
     <Content Include="Content\Login\vendor\jquery\jquery-3.2.1.min.js" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Content\css\Site.css" />
     <Content Include="Content\plugins\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\plugins\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\plugins\datatables\dataTables.bootstrap4.css" />

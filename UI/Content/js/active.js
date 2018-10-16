@@ -3,7 +3,7 @@
 
     var browserWindow = $(window);
 
-    // :: 1.0 Preloader Active Code
+
     browserWindow.on('load', function () {
         $('.preloader').fadeOut('slow', function () {
             $(this).remove();
@@ -11,20 +11,20 @@
     });
 
     //$('[data-countdown]').each(function () {
-    //    var $this = $(this),
-    //        finalDate = $(this).data('countdown');
-    //    $this.countdown(finalDate, function (event) {
-    //        $this.html(event.strftime('%D <span>Days</span> %H <span>Hours</span> %M <span>Minutes</span> %S <span>Seconds</span>'));
+    //   var $this = $(this),
+    //       finalDate = $(this).data('countdown');
+    //   $this.countdown(finalDate, function (event) {
+    //       $this.html(event.strftime('%D <span>Days</span> %H <span>Hours</span> %M <span>Minutes</span> %S <span>Seconds</span>'));
     //    });
     //});
 
 
-    // :: 2.0 Nav Active Code
+  
     if ($.fn.classyNav) {
         $('#croseNav').classyNav();
     }
 
-    // :: 3.0 Search Active Code
+ 
     $('#header-search').on('click', function () {
         $('.search-form-area').toggleClass('search-on');
     });
@@ -32,7 +32,7 @@
         $('.search-form-area').removeClass('search-on');
     });
 
-    // :: 4.0 Sliders Active Code
+  
     if ($.fn.owlCarousel) {
         var welcomeSlide = $('.hero-post-slides');
         var upcomingSlides = $('.upcoming-slides');
@@ -88,7 +88,7 @@
         });
     }
     
-    // :: 5.0 magnificPopup Active Code
+   
     if ($.fn.magnificPopup) {
         $('.gallery-img').magnificPopup({
             gallery: {
@@ -98,7 +98,7 @@
         });
     }
     
-    // :: 6.0 ScrollUp Active Code
+   
     if ($.fn.scrollUp) {
         browserWindow.scrollUp({
             scrollSpeed: 1500,
@@ -106,24 +106,22 @@
         });
     }
 
-    // :: 7.0 Sticky Active Code
+  
     if ($.fn.sticky) {
         $(".crose-main-menu").sticky({
             topSpacing: 0
         });
     }
 
-    // :: 8.0 Tooltip Active Code
+    
     if ($.fn.tooltip) {
         $('[data-toggle="tooltip"]').tooltip()
     }
 
-    // :: 9.0 prevent default a click
     $('a[href="#"]').on('click', function ($) {
         $.preventDefault();
     });
 
-    // :: 10.0 wow Active Code
     if (browserWindow.width() > 767) {
         new WOW().init();
     }

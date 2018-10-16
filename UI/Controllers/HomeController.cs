@@ -1,4 +1,6 @@
 ﻿using Domain;
+using PagedList;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace UI
@@ -81,8 +83,10 @@ namespace UI
         }
         public ActionResult NationalProgramme()
         {
-            var upcomingevent = _uow.Events.GetAll();
 
+           
+            var upcomingevent = _uow.Events.GetAll();
+            
             var dvm = new HomeViewModel
             {
 
@@ -92,5 +96,6 @@ namespace UI
             return View(dvm);
          
         }
+      
     }
 }

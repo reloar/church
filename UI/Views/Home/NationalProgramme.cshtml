@@ -29,10 +29,7 @@
           
             @foreach (var item in Model.Events.OrderBy(item => item.EventDate))
             {
-                if (item.Eventtype.Id == 2)
-                {
-                    continue;
-                }
+               
                 <div class="col-12">
                     <!-- Single Upcoming Events Area -->
                     <div class="single-upcoming-events-area d-flex flex-wrap align-items-center">

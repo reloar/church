@@ -1,0 +1,84 @@
+﻿@using Domain
+
+
+@model UI.HomeViewModel
+
+@{
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="gallery-area d-flex flex-wrap">
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/13.jpg" class="gallery-img" title="Gallery Image 1">
+            <img src="~/Content/img/bg-img/13.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/14.jpg" class="gallery-img" title="Gallery Image 2">
+            <img src="~/Content/img/bg-img/14.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/15.jpg" class="gallery-img" title="Gallery Image 3">
+            <img src="~/Content/img/bg-img/15.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/16.jpg" class="gallery-img" title="Gallery Image 4">
+            <img src="~/Content/img/bg-img/16.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/17.jpg" class="gallery-img" title="Gallery Image 5">
+            <img src="~/Content/img/bg-img/17.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/18.jpg" class="gallery-img" title="Gallery Image 6">
+            <img src="~/Content/img/bg-img/18.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/19.jpg" class="gallery-img" title="Gallery Image 7">
+            <img src="~/Content/img/bg-img/19.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Single Gallery Area -->
+    <div class="single-gallery-area">
+        <a href="~/Content/img/bg-img/20.jpg" class="gallery-img" title="Gallery Image 8">
+            <img src="~/Content/img/bg-img/20.jpg" alt="">
+        </a>
+    </div>
+
+
+
+    @foreach (var ev in Model.Pictures.OrderBy(i => i.EventDate))
+    {
+        
+            <!-- Single Gallery Area -->
+            <div class="single-gallery-area">
+                <a href="@Url.Content("~/Content/Images/")@ev.PictureThumbnailUrl" class="gallery-img" title="Gallery Image 9">
+                    <img src="@Url.Content("~/Content/Images/")@ev.PictureThumbnailUrl" alt="" />
+                </a>
+            </div>
+       
+    }
+
+
+
+</div>

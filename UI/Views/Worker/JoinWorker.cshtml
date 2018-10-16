@@ -1,0 +1,269 @@
+﻿@model UI.WorkersViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Join Us";
+
+}
+
+
+
+<div class="breadcumb-area bg-img" style="background-image: url(~/Content/img/bg-img/bg-6.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="breadcumb-text">
+                    <h5>Join the work force</h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-12 col-lg-6">
+    <div class="contact-form-area">
+
+        @using (Html.BeginForm("JoinWorker", "Worker", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.HiddenFor(model => model.Id)
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Surname*:</label>
+                        <input type="text" class="form-control" name="FirstName" placeholder="Surname" required />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">First Name*:</label>
+                        <input type="text" class="form-control" name="LastName" placeholder="First Name" required />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Other Name:</label>
+                        <input type="text" class="form-control" name="OtherName" placeholder="Other Name" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Phone Number*:</label>
+                        <input type="text" class="form-control" name="PhoneNumber" placeholder="Phone Number" required />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Email Address*:</label>
+                        <input type="email" class="form-control" name="email" placeholder="E-mail" />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">House Address*:</label>
+                        <input type="text" class="form-control" name="Address" placeholder="House Address" required />
+                    </div>
+                </div>
+
+            </div>
+          
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Profession*:</label>
+                        <input type="text" name="Profession" class="form-control" placeholder="Job Name" required />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="contact-name">Are you Married?*:</label>
+                            <label for="contact-name">
+                                Yes
+                                <input type="radio" name="IsMarried" Value="Yes" />
+
+                            </label>
+                            <label for="contact-name">
+                                No
+                                <input type="radio" name="IsMarried" Value="No" />
+
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Spouse Name:</label>
+                        <input type="text" class="form-control" name="SpouseName" placeholder="Spouse Name"  />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Number of Children:</label>
+                        <input type="text" class="form-control" name="NumberOfChildren" placeholder="How many children"  />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Wedding Anniversary:</label>
+                        <input type="text" name="MarriageAnniversary" class="form-dateInput" placeholder="mm/dd/yyyy hh:mm:ss"  />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="contact-name">Are you Born Again*:</label>
+                            <label for="contact-name">
+                                Yes
+                                <input type="radio" name="BornAgain" Value="Yes" />
+
+                            </label>
+                            <label for="contact-name">
+                                No
+                                <input type="radio" name="BornAgain" Value="No" />
+
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">(If you answer yes above,):</label>
+                        <label for="contact-name">Year*:</label>
+                        <input type="text" name="YearBornAgain" class="form-dateInput" placeholder="mm/dd/yyyy hh:mm:ss"  />
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="contact-name">Have you done water baptism by immersion?*:</label>
+                            <label for="contact-name">
+                                Yes
+                                <input type="radio" name="WaterBaptism" Value="Yes" />
+
+                            </label>
+                            <label for="contact-name">
+                                No
+                                <input type="radio" name="WaterBaptism" Value="No" />
+
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">(If you answer yes above,):</label>
+                        <label for="contact-name">Baptism Date*:</label>
+                        <input type="text" name="BaptismDate" class="form-dateInput" placeholder="mm/dd/yyyy hh:mm:ss"  />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Where were you baptised?*:</label>
+                        <input type="text" name="ChurchBaptised" class="form-control" placeholder="Church"  />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="contact-name">Have you been baptised in the Holy Ghost?*:</label>
+                            <label for="contact-name">
+                                Yes
+                                <input type="radio" name="HolyGhostBaptism" Value="Yes" />
+
+                            </label>
+                            <label for="contact-name">
+                                No
+                                <input type="radio" name="HolyGhostBaptism" Value="No" />
+
+                            </label>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Date Joined Redeem:</label>
+                        <input type="text" name="JoinDate" class="form-dateInput" placeholder="mm/dd/yyyy hh:mm:ss"  />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Select a department*:</label>
+                        @Html.DropDownListFor(model => model.DepartmentName, (IEnumerable<SelectListItem>)ViewBag.Department, "Select a department", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="contact-name">Any Exerience in the department before*:</label>
+                            <label for="contact-name">
+                                Yes
+                                <input type="radio" name="IsExperience?" Value="Yes" />
+
+                            </label>
+                            <label for="contact-name">
+                                No
+                                <input type="radio" name="IsExperience" Value="No" />
+
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-12">
+                    <div class="form-group">
+                        <label for="contact-name">Experience  :</label>
+                        <textarea name="Experience" class="form-control" cols="30" rows="10" placeholder="Type Experience here if any"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">Picture*:</label>
+                        <input type="file" name="ImageFile" class="imgInp form-control" width="150" height="150" accept=".png,.jpg,.jpeg,.gif,.tif" required placeholder="Upload Picture" />
+                    </div>
+                    <div class="col-md-offset-2 col-md-10">
+                        <img src="@Url.Content("~/Content/Images/")@Model.ImageUrl" width="150" height="150" class="img-upload" alt=" Image" />
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-12 col-lg-4">
+                    <div class="form-group">
+                        <label for="contact-name">File*:</label>
+                        <input type="file" name="FilethunmbnailUrl" class="imgInp form-control" accept=".png,.jpg,.jpeg,.gif,.tif" width="150" height="150"  placeholder="Upload Files" />
+                    </div>
+                    <div class="col-md-offset-2 col-md-10">
+                        <img src="@Url.Content("~/Content/Images/")@Model.FileUrl" width="150" height="150" class="img-upload" alt="File" />
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <input type="submit" value="Save" class="btn btn-primary" />
+        }
+    </div>
+</div>
+
+

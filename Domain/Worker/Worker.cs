@@ -33,5 +33,12 @@ namespace Domain
         public string ChurchBaptised { get; set; }
         public string BornAgain { get; set; }
         public string YearBornAgain { get; set; }
+
+        public DateTime BirthDate { get; set; }
+        public string SOM { get; set; }
+        public string SOD { get; set; }
+        public string BC { get; set; }
+        public DateTime SOMYear { get; set; }
+        public DateTime SODYear { get; set; }
     }
 }

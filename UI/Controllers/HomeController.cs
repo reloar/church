@@ -69,7 +69,6 @@ namespace UI
                     FullName = cm.FullName,
                     PhoneNumber = cm.PhoneNumber,
                     Body = cm.Body,
-
                     To = "praiseassembly@gmail.com"
                 };
                 _uow.Contact.Add(contact);

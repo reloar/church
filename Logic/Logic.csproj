@@ -88,6 +88,18 @@
     <Compile Include="Migrations\201810160839457_ContactModel.Designer.cs">
       <DependentUpon>201810160839457_ContactModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810171148425_workerModelModified.cs" />
+    <Compile Include="Migrations\201810171148425_workerModelModified.Designer.cs">
+      <DependentUpon>201810171148425_workerModelModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810171209226_workerModelModified1.cs" />
+    <Compile Include="Migrations\201810171209226_workerModelModified1.Designer.cs">
+      <DependentUpon>201810171209226_workerModelModified1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811121502274_dbchanged.cs" />
+    <Compile Include="Migrations\201811121502274_dbchanged.Designer.cs">
+      <DependentUpon>201811121502274_dbchanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="News\NewsRepo.cs" />
     <Compile Include="PraiseDbContext.cs" />
@@ -122,6 +134,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810160839457_ContactModel.resx">
       <DependentUpon>201810160839457_ContactModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810171148425_workerModelModified.resx">
+      <DependentUpon>201810171148425_workerModelModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810171209226_workerModelModified1.resx">
+      <DependentUpon>201810171209226_workerModelModified1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811121502274_dbchanged.resx">
+      <DependentUpon>201811121502274_dbchanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

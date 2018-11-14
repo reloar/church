@@ -63,7 +63,8 @@
                                     <div class="form-group">
                                         @Html.LabelFor(model => model.SermonDate, htmlAttributes: new { @class = "control-label col-md-6" })
                                         <div class="col-md-10">
-                                            <input type="text" name="SermonDate" class="form-dateInput" placeholder="mm/dd/yyyy hh:mm:ss" />
+                                            <input type="date" name="SermonDate" class="form-dateInput" Value="mm/dd/yyyy" />
+
                                             @Html.ValidationMessageFor(model => model.SermonDate, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
@@ -102,6 +103,22 @@
                                         </div>
 
                                     </div>
+
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SermonvideoUrl, htmlAttributes: new { @class = "control-label col-md-6" })
+                                        <div class="col-md-10">
+                                            <input type="file" name="SermonvideoFile" class="form-control" accept="video/mp4,video/x-m4v,video/*" required />
+
+                                        </div>
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <img src="@Url.Content("~/Content/Media/")@Model.SermonvideoUrl" width="150" height="150" alt="Preacher's Image" />
+
+
+                                        </div>
+
+                                    </div>
+
 
                                     <div class="form-group">
                                         @Html.LabelFor(model => model.SermonCategoryName, htmlAttributes: new { @class = "control-label col-md-6" })

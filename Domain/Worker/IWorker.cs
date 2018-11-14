@@ -35,6 +35,13 @@ namespace Domain
          string BornAgain { get; set; }
          string YearBornAgain { get; set; }
         string IsExperienced { get; set; }
+
+         DateTime BirthDate { get; set; }
+         string SOM { get; set; }
+         string SOD { get; set; }
+         string BC { get; set; }
+         DateTime SOMYear { get; set; }
+         DateTime SODYear { get; set; }
     }
 }
 

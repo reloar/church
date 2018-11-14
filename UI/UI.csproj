@@ -187,6 +187,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\countdown\js\jquery.countdown.min.js" />
     <Content Include="Content\css\Admin.css" />
     <Content Include="Content\aos.css" />
     <Content Include="Content\css\animate.css" />
@@ -200,8 +201,6 @@
     <Content Include="Content\css\owl.video.play.html" />
     <Content Include="Content\dist\css\adminlte.css" />
     <Content Include="Content\dist\css\adminlte.min.css" />
-    <Content Include="Content\dist\img\chop.png" />
-    <Content Include="Content\dist\img\user2-160x160.jpg" />
     <Content Include="Content\dist\js\adminlte.js" />
     <Content Include="Content\dist\js\adminlte.min.js" />
     <Content Include="Content\dist\js\demo.js" />
@@ -245,11 +244,14 @@
     <Content Include="Content\img\bg-img\6.jpg" />
     <Content Include="Content\img\bg-img\birthday.jpeg" />
     <Content Include="Content\img\bg-img\BroFemi.jpg" />
+    <Content Include="Content\img\bg-img\concert.jpeg" />
     <Content Include="Content\img\bg-img\happybirthday.jpeg" />
     <Content Include="Content\img\bg-img\love.jpeg" />
     <Content Include="Content\img\bg-img\mummyOyediran.jpg" />
     <Content Include="Content\img\bg-img\pastor.jpg" />
     <Content Include="Content\img\bg-img\PstDitsu.jpeg" />
+    <Content Include="Content\img\bg-img\event.jpg" />
+    <Content Include="Content\img\bg-img\thanksgiving.jpg" />
     <Content Include="Content\img\bg-img\Vigil.jpg" />
     <Content Include="Content\img\bg-img\Wedding.jpeg" />
     <Content Include="Content\img\bg-img\Wedding.jpg" />
@@ -257,18 +259,13 @@
     <Content Include="Content\img\core-img\zoom.png" />
     <Content Include="Content\img\rccggood.png" />
     <Content Include="Content\js\active.js" />
+    <Content Include="Content\js\AngScript.js" />
     <Content Include="Content\js\bootstrap\bootstrap.min.js" />
     <Content Include="Content\js\bootstrap\popper.min.js" />
+    <Content Include="Content\js\DateCount.js" />
     <Content Include="Content\js\jquery\jquery-2.2.4.min.js" />
     <Content Include="Content\js\plugins\plugins.js" />
     <Content Include="Content\Login\css\main.css" />
-    <Content Include="Content\Login\css\util.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
-    <Content Include="Content\Login\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
-    <Content Include="Content\Login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
     <Content Include="Content\Login\images\login.jpg" />
     <Content Include="Content\Login\js\main.js" />
     <Content Include="Content\Login\vendor\animsition\css\animsition.css" />
@@ -461,43 +458,6 @@
     <Content Include="Content\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\plugins\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Content\plugins\jquery\jquery.min.map" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\animated.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\core.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\icons.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\larger.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\list.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\mixins.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\path.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\stacked.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\variables.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_core.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_list.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_path.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
-    <Content Include="Content\Login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
-    <Content Include="Content\Login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
-    <Content Include="Content\Login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
-    <Content Include="Content\Login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
     <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
     <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-reboot.css.map" />
@@ -647,7 +607,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\dist\img\credit\" />
     <Folder Include="Content\dist\js\plugins\popper\esm\" />
     <Folder Include="Content\dist\js\plugins\popper\umd\" />
     <Folder Include="Content\Images\" />

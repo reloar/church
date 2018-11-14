@@ -518,7 +518,7 @@ img {
   z-index: 1; }
   .about-us-area .about-thumbnail {
     border-radius: 5px;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 30px; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .about-us-area .about-thumbnail {

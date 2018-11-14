@@ -1,10 +1,5 @@
 
 
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
 @font-face {
   font-family: Ubuntu-Regular;
   src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
@@ -18,8 +13,6 @@
 
 
 
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
 
 * {
 	margin: 0px; 
@@ -32,7 +25,7 @@ body, html {
 	font-family: Ubuntu-Regular, sans-serif;
 }
 
-/*---------------------------------------------*/
+
 a {
 	font-family: Ubuntu-Regular;
 	font-size: 14px;
@@ -54,7 +47,7 @@ a:hover {
   color: #fff;
 }
 
-/*---------------------------------------------*/
+
 h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
@@ -71,9 +64,6 @@ ul, li {
 	margin: 0px;
 	list-style-type: none;
 }
-
-
-/*---------------------------------------------*/
 input {
 	outline: none;
 	border: none;
@@ -129,8 +119,6 @@ iframe {
 }
 
 
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 13px;
@@ -139,8 +127,7 @@ iframe {
 }
 
 
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
+
 
 .limiter {
   width: 100%;
@@ -188,8 +175,6 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Form ]*/
 
 .login100-form {
   width: 100%;
@@ -227,8 +212,7 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Input ]*/
+
 
 .wrap-input100 {
   width: 100%;
@@ -254,7 +238,7 @@ iframe {
   transition: all 0.4s;
 }
 
-/*---------------------------------------------*/ 
+
 .focus-input100 {
   position: absolute;
   display: block;
@@ -332,8 +316,7 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Button ]*/
+
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -407,8 +390,6 @@ iframe {
 
 
 
-/*------------------------------------------------------------------
-[ Alert validate ]*/
 
 .validate-input {
   position: relative;

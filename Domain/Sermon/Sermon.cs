@@ -12,9 +12,7 @@ namespace Domain
         public DateTime SermonDate { get; set; }
         public string ImageUrl { get; set; }
         public string ImageThumbnailUrl { get; set; }
-       //public string SermonvideoUrl { get; set; }
-       // public string SermonvideoThumbnail { get; set; }
-
+        public string VideoLink { get; set; }
         public bool IsLiked { get; set; }
         public virtual SermonCategory SermonCategory { get; set; }
        

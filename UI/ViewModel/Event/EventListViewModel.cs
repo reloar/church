@@ -10,5 +10,6 @@ namespace UI
     public class EventListViewModel
     {
         public IPagedList<IEvent> Events { get; set; }
+      
     }
 }

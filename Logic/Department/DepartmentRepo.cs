@@ -13,10 +13,7 @@ namespace Logic
         {
 
         }
-        public IEnumerable<Department> Department
-        {
-            get { return this.GetAll(); }
-        }
+      
 
     }
 }

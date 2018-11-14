@@ -1,7 +1,7 @@
 ﻿@model UserViewModel
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
     ViewBag.Title = "Add User";
 }
 <div class="content-wrapper">
@@ -56,7 +56,7 @@
                                             @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
-
+                                    @Html.HiddenFor(model => model.Id)
                                     <div class="form-group">
                                         @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-6" })
                                         <div class="col-md-10">
@@ -65,19 +65,19 @@
                                         </div>
                                     </div>
                                     @*<div class="form-group">
-                                        <label for="role">Role</label>
-                                        <select class="form-control" id="role" name="RoleName">
-                                            @foreach (var role in Model.Roles)
-                                            {
-                                                <option value="@role.Id">@role.Name</option>
-                                            }
-                                        </select>
-                                    </div>*@
+                <label for="role">Role</label>
+                <select class="form-control" id="role" name="RoleName">
+                    @foreach (var role in Model.Roles)
+                    {
+                        <option value="@role.Id">@role.Name</option>
+                    }
+                </select>
+            </div>*@
                                     @*<div class="form-group">
                                         @Html.LabelFor(model => model.Role, htmlAttributes: new { @class = "control-label col-md-6" })
                                         <div class="col-md-10">
 
-                                            @Html.DropDownListFor(model => model.Role, (IEnumerable<SelectListItem>)ViewBag.Roles, "Select Role", new { @class = "form-control" })
+                                            @Html.DropDownListFor(model => model.Roles, (IEnumerable<SelectListItem>)ViewBag.Roles, "Select Role", new { @class = "form-control" })
                                         </div>
                                     </div>*@
 

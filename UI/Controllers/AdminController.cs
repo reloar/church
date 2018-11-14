@@ -387,7 +387,18 @@ namespace UI
                 return View(wvm);
             }
         }
+        public ActionResult DeleteMail(int Id)
+        {
+            var _mail = _uow.Contact.Find(e => e.Id == Id).FirstOrDefault();
+            if (_mail != null)
+            {
+                _uow.Contact.Remove(_mail);
+                _uow.Commit();
+                TempData["message"] = $"{_mail.Subject} was successfully deleted.{Environment.NewLine}";
+            }
+            return RedirectToAction("Index");
 
+        }
 
 
         [HttpGet]
@@ -413,6 +424,10 @@ namespace UI
                 fileName = Path.Combine(Server.MapPath("~/Content/Images/"), fileName);
                 sv.ImageFile.SaveAs(fileName);
 
+
+
+              
+
                 var addsermon = new Sermon
                 {
                     SermonDate=sv.SermonDate,
@@ -424,9 +439,8 @@ namespace UI
                     SermonCategory= sermoncat,
                     ImageUrl=sv.ImageUrl,
                     ImageThumbnailUrl=sv.ImageUrl,
-
-                    //SermonvideoUrl=sv.SermonvideoUrl,
-                    //SermonvideoThumbnail=sv.SermonvideoUrl
+                    VideoLink=sv.SermonvideoUrl
+                    
 
                 };
                 _uow.Sermons.Add(addsermon);
@@ -523,8 +537,9 @@ namespace UI
                 SermonDate = _sermon.SermonDate,
                 SermonText = _sermon.Bibletext,
                 SermonTitle = _sermon.Title,
-                Id = _sermon.Id,
-                ImageUrl = _sermon.ImageUrl
+                //Id = _sermon.Id,
+                ImageUrl = _sermon.ImageUrl,
+                SermonvideoUrl=_sermon.VideoLink
 
             };
             return View(svm);
@@ -556,6 +571,7 @@ namespace UI
                     sermon.ShortDescription = svm.ShortDescription;
                     sermon.ImageUrl = svm.ImageUrl;
                     sermon.ImageThumbnailUrl = svm.ImageUrl;
+                    sermon.VideoLink = svm.SermonvideoUrl;
                     if (svm.ImageFile != null && svm.ImageFile.ContentLength > 0)
                     {
                         svm.ImageFile.SaveAs(fileName);
@@ -811,9 +827,11 @@ namespace UI
         {
             var pageSize = 10;
             var events = _uow.Events.GetAll().ToList().ToPagedList(page ?? 1, pageSize);
+            
             var elvm = new EventListViewModel
             {
-                Events = events
+                Events = events,
+                
             };
             ViewBag.Page = page;
             ViewBag.PageSize = pageSize;
@@ -881,8 +899,31 @@ namespace UI
         }
 
         public ActionResult DeleteEvent(int Id)
-        {
+        {           
+            
             var _event = _uow.Events.Find(e => e.Id == Id).FirstOrDefault();
+            
+            if (_event.EventImageUrl != null)
+            {
+                var path = Server.MapPath(@"~/Content/images");
+                List<string> files = Directory.GetFiles(path).ToList();
+                var fullPath = string.Empty;
+                var fileName = _event.EventImageUrl;
+                var realFileName = files.Where(f => f.Contains(fileName)).FirstOrDefault();
+
+                if (realFileName != null)
+                {
+                    fullPath = Path.Combine(Server.MapPath("~/Content/Images/"), realFileName);
+                    if (System.IO.File.Exists(fullPath))
+                    {
+                        System.IO.File.Delete(fullPath);
+                        var ImgMessage = $"the image: {fullPath} was also removed.";
+
+                    }
+
+                }
+            }
+
             if (_event != null){
                 _uow.Events.Remove(_event);
                 _uow.Commit();

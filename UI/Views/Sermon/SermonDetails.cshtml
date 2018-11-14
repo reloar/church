@@ -5,6 +5,7 @@
 @model UI.SermonIndexViewModel
 @{
     ViewBag.Title = "SermonDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
 
@@ -29,7 +30,7 @@
 <div class="sermons-details-area section-padding-100">
     <div class="container">
         <div class="row justify-content-between">
-            <!-- Blog Posts Area -->
+
             <div class="col-12 col-lg-8">
                 <div class="sermons-details-area">
 
@@ -39,17 +40,21 @@
 
                         <div class="post-content">
                             <h2 class="post-title mb-30">@Model.sermon.Title</h2>
-                            <img src="@Url.Content("~/Content/Images/")@Model.sermon.ImageThumbnailUrl" alt="sermons/@Model.sermon.PreacherName" />
+                            @*<img src="@Url.Content("~/Content/Images/")@Model.sermon.ImageThumbnailUrl" alt="sermons/@Model.sermon.PreacherName" />*@
 
-                            <!-- Catagory & Share -->
+
                             <div class="catagory-share-meta d-flex flex-wrap justify-content-between align-items-center">
-                                <div class="sermons-cata">
-                                    <a href="@Url.Action("PrintPdf","Sermon", new { id = Model.sermon.Id })" data-toggle="tooltip" data-placement="top" title="Download"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+                                <div>
+                                    @*<video width="320" controls>
+                                        <source src="@Url.Content("~/Content/Media/")@Model.sermon.SermonvideoThumbnail" type="video/mp4" />
 
+                                    </video>*@
                                 </div>
-                                <!-- Share -->
+
                                 <div class="share">
-                                    <span>Share:</span>
+                                    @*<span>Share:</span>*@
+                                    <a href="@Url.Action("PrintPdf","Sermon", new { id = Model.sermon.Id })" data-toggle="tooltip" data-placement="top" title="Download Message"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+
                                     <a href="https://www.facebook.com/rccgpraiseajah"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     <a href="http://twitter.com/rccgpraiseajah"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                     <a href="https://www.instagram.com/rccgpraiseajah"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -63,6 +68,22 @@
                                     <h6>- @Model.sermon.PreacherName</h6>
                                 </div>
                             </blockquote>
+                            <div class="share" ng-controller="myController">
+                                <div>
+                                    {{technologies.likes}}
+                                    <a href="#"><i class="fa fa-hand-o-up" aria-hidden="true" value="Like" ng-click="incrementLikes(technologies)"></i>Like</a>
+
+                                </div>
+                                <div>
+                                    {{technologies.dislikes}}
+                                    <a href="#"> <i class="fa fa-hand-o-down" aria-hidden="true" value="Dislike" ng-click="incrementDislikes(technologies)"></i>Dislike</a>
+
+                                </div>
+
+                               
+
+                               
+                            </div>
                         </div>
 
                     </div>
@@ -70,7 +91,7 @@
                 </div>
             </div>
 
-          
+
         </div>
     </div>
 </div>

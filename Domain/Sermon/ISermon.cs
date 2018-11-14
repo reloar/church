@@ -16,6 +16,8 @@ namespace Domain
         string ImageUrl { get; set; }
 
         string ImageThumbnailUrl { get; set; }
+
+        string VideoLink { get; set; }
         //string SermonvideoUrl { get; set; }
         //string SermonvideoThumbnail { get; set; }
 

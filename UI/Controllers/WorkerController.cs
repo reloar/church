@@ -70,7 +70,13 @@ namespace UI
                     ChurchBaptised=dcvm.ChurchBaptised,
                     BornAgain=dcvm.BornAgain,
                     YearBornAgain=dcvm.YearBornAgain ,
-                    IsExperienced=dcvm.IsExperienced
+                    IsExperienced=dcvm.IsExperienced,
+                    BirthDate=dcvm.BirthDate,
+                    SOD=dcvm.SOD,
+                    SODYear=dcvm.SODYear,
+                    SOM=dcvm.SOM,
+                    SOMYear=dcvm.SOMYear,
+                    BC=dcvm.BC
                 };
 
                 _uow.Workers.Add(worker);

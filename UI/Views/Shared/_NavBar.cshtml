@@ -36,7 +36,9 @@
                 <nav class="classy-navbar justify-content-between" id="croseNav">
 
                     <!-- Nav brand -->
-                    <a href="index-2.html" class="nav-brand"><img src="~/Content/img/rccggood.png" alt="" width="40" height="40"></a>
+                    <a href="#" class="nav-brand"><img src="~/Content/img/rccggood.png" alt="" width="40" height="40">
+                    <span>PRAISE ASSEMBLY</span>
+                    </a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -55,7 +57,9 @@
                         <div class="classynav">
                             <ul>
                                 <li>  @Html.ActionLink("Home", "Index", "Home")</li>
-                                <li>
+                                <li>@Html.ActionLink("NationalProgramme", "NationalProgramme", "Home")</li>
+
+                                @*<li>
                                     <a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li>  @Html.ActionLink("Home", "Index", "Home")</li>
@@ -65,17 +69,17 @@
                                         <li>@Html.ActionLink("Event", "UpcomingEvents", "Event")</li>
                                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                                     </ul>
-                                </li>
+                                </li>*@
                                 <li>
-                                    <a href="#">Megamenu</a>
-                                                                         
-                                        <ul class="dropdown">
-                                            <li>@Html.ActionLink("Over View", "About", "Home")</li>
-                                            <li>@Html.ActionLink("Join Department", "JoinWorker", "Worker")</li>
-                                            <li>@Html.ActionLink("Gallery", "Gallery", "Gallery")</li>
-                                            <li><a href="@Url.Action("DepartmentCorner","Department")">Ministries</a></li>
-                                        </ul>
-                                 
+                                    <a href="#">Over View</a>
+
+                                    <ul class="dropdown">
+                                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                                        <li>@Html.ActionLink("Join Department", "JoinWorker", "Worker")</li>
+                                        <li>@Html.ActionLink("Gallery", "Gallery", "Gallery")</li>
+                                        <li><a href="@Url.Action("DepartmentCorner","Department")">Ministries</a></li>
+                                    </ul>
+
                                 </li>
                                 <li>@Html.ActionLink("Events", "UpcomingEvents", "Event")</li>
                                 <li>@Html.ActionLink("Sermon", "Index", "Sermon")</li>
